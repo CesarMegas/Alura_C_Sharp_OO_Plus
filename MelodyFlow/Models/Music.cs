@@ -1,6 +1,6 @@
 namespace MelodyFlow.Models;
 
-class Music
+internal class Music
 
 {
     public Music(Band artist, string name)
