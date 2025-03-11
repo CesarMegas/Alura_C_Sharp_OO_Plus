@@ -3,12 +3,12 @@
 using MelodyFlow.Models;
 
 Band strayKids = new("Stray Kids");
-strayKids.AddReview(10);
-strayKids.AddReview(8);
-strayKids.AddReview(6);
+strayKids.AddReview(new Review (10));
+strayKids.AddReview(new Review(8));
+strayKids.AddReview(new Review (6));
 Band blackPink = new("Black Pink");
-blackPink.AddReview(10);
-blackPink.AddReview(9);
+blackPink.AddReview(new Review(10));
+blackPink.AddReview(new Review(9));
 Band linkinPark = new("Linkin Park");
 
 
@@ -167,9 +167,9 @@ void ReviewBand()
     {
         Band band = bandsDictionary[bandName];
         Console.Write($"\nRate the Band {bandName}: ");
-        int review = int.Parse(Console.ReadLine()!);
+        Review review = Review.Parse(Console.ReadLine()!);
         band.AddReview(review);
-        Console.WriteLine($"\nThe review {review} was Successfully Registered to the Band {bandName}!");
+        Console.WriteLine($"\nThe review {review.Rate} was Successfully Registered to the Band {bandName}!");
         Thread.Sleep(3000);
         Console.Clear();
         DisplayMenuOptions();
