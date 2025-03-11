@@ -1,6 +1,6 @@
 namespace MelodyFlow.Models;
 
-class Album
+internal class Album
 {
     private List<Music> songs = new List<Music>();
 
