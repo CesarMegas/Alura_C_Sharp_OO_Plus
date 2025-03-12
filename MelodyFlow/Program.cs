@@ -79,3 +79,4 @@ void DisplayMenuOptions()
 
 // Starts the App with the Main Menu
 DisplayMenuOptions();
+
