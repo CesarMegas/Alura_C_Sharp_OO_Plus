@@ -27,7 +27,8 @@ options.Add(1, new MenuRegisterBand());
 options.Add(2, new MenuRegisterAlbum());
 options.Add(3, new MenuDisplayEveryBand());
 options.Add(4, new MenuReviewBand());
-options.Add(5, new MenuViewBandDetails());
+options.Add(5, new MenuReviewAlbum());
+options.Add(6, new MenuViewBandDetails());
 options.Add(0, new MenuEndProgram());
 
 // Function that displays the App's Logo
@@ -56,7 +57,8 @@ void DisplayMenuOptions()
     Console.WriteLine("2. Register a Band's Album");
     Console.WriteLine("3. Display Every Band");
     Console.WriteLine("4. Review a Band");
-    Console.WriteLine("5. View the Details of a Band");
+    Console.WriteLine("5. Review an Album");
+    Console.WriteLine("6. View the Details of a Band");
     Console.WriteLine("0. End the Program");
 
     // Receives and Stores the User's Chosen Option
@@ -79,4 +81,3 @@ void DisplayMenuOptions()
 
 // Starts the App with the Main Menu
 DisplayMenuOptions();
-
