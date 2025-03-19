@@ -1,9 +1,9 @@
 namespace MelodyFlow.Models;
 
-class Band
+internal class Band : IRatable
 {
     private List<Album> albums = new List<Album>();
-    private List<int> reviews = new List<int>();
+    private List<Review> reviews = new List<Review>();
 
     public Band(string name)
     {
@@ -11,15 +11,22 @@ class Band
     }
 
     public string Name { get; }
-    public double Average => reviews.Average();
-    public List<Album> Albums => albums;
+    public double Average
+    {
+        get 
+        { 
+            if (reviews.Count == 0) return 0;
+            else return reviews.Average(r => r.Rate);
+        }
+    }
+    public IEnumerable<Album> Albums => albums;
 
     public void AddAlbum(Album album)
     {
         albums.Add(album);
     }
 
-    public void AddReview(int review)
+    public void AddReview(Review review)
     {
         reviews.Add(review);
     }
