@@ -18,9 +18,11 @@ internal class MenuViewBandDetails : Menu
         {
             Band band = bandsDictionary[bandName];
             Console.WriteLine($"\nThe Average of {bandName}'s Reviews is {band.Average}.");
-            /**
-            * ESPAÇO RESERVADO PARA COMPLETAR A FUNÇÃO
-            */
+            Console.WriteLine($"\n{bandName}'s Discography: ");
+            foreach(Album album in band.Albums)
+            {
+                Console.WriteLine($"· {album.Name} -> {album.Average}");
+            }
             Console.WriteLine("\nType a Key to Return to the Main Menu");
             Console.ReadKey();
             Console.Clear();
